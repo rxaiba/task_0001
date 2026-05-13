@@ -14,9 +14,11 @@ add_compile_options(
     -Wfatal-errors
     -pedantic
     --pedantic-errors
+    -Wno-c++98-compat
 )
 
-add_executable(task_0001 main.cpp)
+add_executable(task_0001 main.cpp subprocess.h subprocess.cpp)
+target_include_directories(task_0001 PRIVATE "${CMAKE_CURRENT_LIST_DIR}")
 
 enable_testing()
 add_test(
