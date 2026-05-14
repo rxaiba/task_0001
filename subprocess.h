@@ -1,3 +1,6 @@
+#ifndef SUBPROCESS_H_
+#define SUBPROCESS_H_
+
 #include <future>
 #include <string>
 #include <tuple>
@@ -28,3 +31,5 @@ class subprocess {
   // retry on failure 10 times, exponential backoff with 60 seconds maximum
   static void run_6(const std::vector<std::string>& args);
 };
+
+#endif // SUBPROCESS_H_
