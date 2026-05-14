@@ -24,7 +24,9 @@ class subprocess {
       const std::vector<std::string>& args);
 
   // Start a detached process without capturing its output,
-  // exit code saved in std::future
+  // exit code saved in std::future. Detached means that it will not block the
+  // current flow. For example, if you start ten long-running executables by
+  // sequential calls to 'run_5', they all will be working simultaneously
   // Note:
   //   since the process is detached, there is no need to log the execution time
   static std::future<int> run_5(const std::vector<std::string>& args);
