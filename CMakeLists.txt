@@ -15,6 +15,8 @@ add_compile_options(
     -pedantic
     --pedantic-errors
     -Wno-c++98-compat
+    -Wno-c++98-compat-pedantic
+    -Wno-padded
 )
 
 add_executable(task_0001 main.cpp subprocess.h subprocess.cpp)
